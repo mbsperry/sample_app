@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SampleApp</title>
+	<title><%= full_title(yield(:title)) %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<%= link_to 'Home', static_pages_home_path %>
+	<%= link_to 'About Us', static_pages_about_path %>
+	<%= link_to 'Help', static_pages_help_path %>
 
 <%= yield %>
 
