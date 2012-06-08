@@ -17,7 +17,7 @@ describe "StaticPages" do
       click_link "Home"
       page.should have_selector 'title', text: full_title('')
       click_link "sample app"
-      page.should have_selector 'title', text: full_title('')
+      page.should_not have_selector 'title', text: full_title('|')
     end
 
   end
